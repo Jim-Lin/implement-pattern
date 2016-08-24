@@ -1,24 +1,24 @@
-class People {
+public class People {
     private String name;
     private Integer age;
     private String hobby;
 
-    static class Builder {
+    public static class Builder {
         private String name;
         private Integer age;
         private String hobby;
 
-        Builder(String name, Integer age) {
+        public Builder(String name, Integer age) {
             this.name = name;
             this.age = age;
         }
 
-        Builder hobby(String hobby) {
+        public Builder hobby(String hobby) {
             this.hobby = hobby;
             return this;
         }
 
-        People build() {
+        public People build() {
             if (name == null || age == null) {
                 throw new NullPointerException();
             }
@@ -32,8 +32,8 @@ class People {
         this.hobby = builder.hobby;
     }
 
-    String hello() {
-        //...
+    public String hello() {
+        // ...
     }
 }
 
